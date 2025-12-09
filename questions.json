@@ -1,0 +1,152 @@
+[
+  {
+    "question": "une mauvaise habitude que l’on essaie d’abandonner",
+    "sample_answers": ["Fumer", "Se ronger les ongles", "Procrastiner", "Se coucher tard", "Se plaindre"]
+  },
+  {
+    "question": "Un animal dont le nom commence par la lettre 'E'",
+    "sample_answers": ["Éléphant", "Élan", "Étoile de mer", "Émeu", "Escargot", "Écureuil"]
+  },
+  {
+    "question": "quelque chose associé aux vampires:",
+    "sample_answers": ["Sang", "Cercueil", "Chauve-souris", "Nuit", "Ail", "Cape", "Immortalité"]
+  },
+  {
+    "question": "un article dans une boutique de souvenirs",
+    "sample_answers": ["Aimant", "Carte postale", "T-shirt", "Porte-clés", "Tasse", "Casquette", "Figurine", "Autocollant"]
+  },
+  {
+    "question": "une qualité des mauvais voisins",
+    "sample_answers": ["Bruyants", "Espions", "Laisser-aller", "Négligents", "Agressifs", "Malodorants", "Sans-gêne", "Trop curieux"]
+  },
+  {
+    "question": "quelque chose qui donne des cauchemars",
+    "sample_answers": ["Films d’horreur", "Monstres", "Araignées", "Un examen", "Fantômes", "Chutes", "Se perdre"]
+  },
+  {
+    "question": "un pays francophone",
+    "sample_answers": ["France", "Canada", "Belgique", "Suisse", "Sénégal", "Maroc", "Haïti"]
+  },
+  {
+    "question": "un animal disparu/éteint",
+    "sample_answers": ["Dodo", "Mammouth", "Smilodon", "Tigre de Tasmanie", "Mégalodon"]
+  },
+  {
+    "question": "une mauvaise condition météo pour conduire",
+    "sample_answers": ["Neige", "Pluie", "Brouillard", "Verglas", "Tempête", "Grêle"]
+  },
+  {
+    "question": "un objet très ancien dans les musées",
+    "sample_answers": ["Fossiles", "Momies", "Statues antiques", "Outils préhistoriques", "Bijoux anciens", "Tablettes d’argile"]
+  },
+  {
+    "question": "quelque chose de chaud",
+    "sample_answers": ["Café", "Thé", "Soupe", "Soleil", "Four", "Feu", "Bain chaud"]
+  },
+  {
+    "question": "quelque chose de froid",
+    "sample_answers": ["Glace", "Neige", "Glaçon", "Eau froide", "Vent d’hiver", "Sorbet"]
+  },
+  
+  {
+    "question": "une chose que l’on fait à table alors que c’est mal poli",
+    "sample_answers": ["Mâcher la bouche ouverte", "Téléphoner", "Roter", "Parler la bouche pleine", "Mettre les coudes sur la table", "Interrompre les autres"]
+  },
+  {
+    "question": "quelque chose que vous emportez toujours pour ne pas vous perdre.",
+    "sample_answers": ["Carte", "GPS", "Téléphone", "Boussole", "Carnet d’adresses", "Un ami"]
+  },
+  {
+    "question": "quelque chose qui différencie les humains des autres animaux.",
+    "sample_answers": ["Parler", "Écrire", "Cuisiner", "Philosopher", "des outils sophistiqués", "Planifier l’avenir à long terme", "Faire des mathématiques"]
+  },
+  {
+    "question": "quelque chose a Ne pas faire en conduisant",
+    "sample_answers": ["Texter", "Boire de l’alcool", "Dormir", "Se maquiller", "Manger", "Regarder son téléphone"]
+  },
+  {
+    "question": "quelque chose que l'on perd souvent",
+    "sample_answers": ["Clés", "Téléphone", "Porte-monnaie", "Lunettes", "Carte bancaire", "Patience", "Parapluie"]
+  },
+  {
+    "question": "une activité plus facile à faire quand il y a du vent",
+    "sample_answers": ["Faire du cerf-volant", "du voile", "Planche à voile", "Sécher le linge", "Faire tourner une éolienne"]
+  },
+  {
+    "question": "un lieux où crier est acceptable",
+    "sample_answers": ["Stade", "Concert", "Parc d’attractions", "Fête", "Gymnase", "Manifestation"]
+  },
+  {
+    "question": "quelque chose qui se trouve dans une trousse de premiers secours",
+    "sample_answers": ["Pansements", "Désinfectant", "Gants", "Ciseaux", "Cotons", "Lingettes antiseptiques"]
+  },
+  {
+    "question": "quelque chose qui se trouve dans une boîte à outils",
+    "sample_answers": ["Marteau", "Tournevis", "Clé", "Mètre ruban", "Pinces", "Perceuse","Vis", "Clous"]
+  },
+  {
+  "question": "Quelque chose que tout le monde sait sur les dragons",
+  "sample_answers": ["Ils crachent du feu", "Ils volent", "Ils sont géants", "Ils gardent des trésors", "Ils n'existent pas"]
+  },
+  {
+    "question": "un animal facile à imiter",
+    "sample_answers": ["Chat", "Chien", "Vache", "Mouton", "Poulet", "Singe"]
+  },
+  {
+    "question": "un pays réputé pour sa cuisine",
+    "sample_answers": ["France", "Italie", "Japon", "Thaïlande", "Mexique", "Espagne"]
+  },
+  {
+    "question": "un pays réputé pour son histoire",
+    "sample_answers": ["Grèce", "Égypte", "Italie", "Chine", "Inde", "Royaume-Uni"]
+  },
+  {
+    "question": "un endroit où l'on doit être silencieux",
+    "sample_answers": ["Bibliothèque", "Salle d’attente", "Cinéma", "Salle de classe", "Musée", "Hôpital"]
+  },
+  {
+    "question": "une invention qui a changé le monde",
+    "sample_answers": ["Internet", "Électricité", "Train", "Automobile", "Téléphone", "Antibiotiques", "Ordinateur"]
+  },
+  {
+    "question": "quelque chose qui est interprétable de plusieurs façons",
+    "sample_answers": ["Un rêve", "Une œuvre d’art", "Le silence", "Un poème", "Une métaphore"]
+  },
+  {
+    "question": "quelque chose qui peut exister sans être visible",
+    "sample_answers": ["Air", "Amour", "Gravité", "Virus", "Pensées", "Émotions", "Odeurs"]
+  },
+  {
+    "question": "une peur irrationnelle",
+    "sample_answers": ["Araignées", "Clowns", "l'Obscurité", "Vol en avion", "Ascenseurs", "Trous (trypophobie)"]
+  },
+  {
+    "question": "une source d’énergie renouvelable",
+    "sample_answers": ["Soleil/Solaire", "Vent/Éolienne", "L'eau / l'hydroélectricité", "Les courants marins", "la chaleur interne de la Terre/ Géothermique"]
+  },
+  {
+    "question": "un élément chimique connu",
+    "sample_answers": [ "Or", "Argent", "Oxygène", "Cuivre", "Plomb", "Carbone", "Fer", "Hydrogène", "Azote"]
+  },
+  {
+    "question": "quelque chose qui ne peut pas être acheté",
+    "sample_answers": ["Temps", "Bonheur", "Confiance", "Sagesse", "Créativité", "Liberté", "Amitié"]
+  },
+  {
+    "question": "quelque chose que l'on trouve dans une maison hantée",
+    "sample_answers": ["Fantômes", "Toiles d'araignées", "Araignées", "Souris", "Poussière"]
+  },
+  {
+    "question": "quelque chose qui se trouve dans l'espace",
+    "sample_answers": ["Le soleil", "La Lune", "Les étoiles", "Les planètes", "Les satellites"]
+  },
+  {
+    "question": "quelque chose qui peut voler",
+    "sample_answers": ["Les oiseaux", "Un avion", "Un hélicoptère", "Un cerf-volant", "Une montgolfière"]
+  },
+  {
+    "question": "quelque chose qui vous tient chaud en hiver",
+    "sample_answers": ["Manteau", "Gants", "Écharpe", "Bonnet/Tuque"]
+  }
+
+]
