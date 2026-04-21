@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import useQuiz from "@hooks/useQuiz";
 import Button from "@components/ui/Button";
-import { APP_NAME } from "@data/constants";
+import { APP_NAME } from "@constants/constants";
 
 
 export default function Home() {

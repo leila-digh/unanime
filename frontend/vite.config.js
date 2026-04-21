@@ -41,6 +41,10 @@ export default defineConfig({
         dirname(fileURLToPath(import.meta.url)),
         'src/hooks'
       ),
+      '@constants' : resolve(
+        dirname(fileURLToPath(import.meta.url)),
+        'src/constants'
+      ),
     }
   }
 })

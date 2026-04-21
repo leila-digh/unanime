@@ -1,4 +1,4 @@
-import { APP_NAME } from "@data/constants";
+import { APP_NAME } from "@constants/constants";
 import { Instructions } from "@components/ui/Instructions";
 import About from "@components/ui/About";
 

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { APP_NAME } from "@data/constants";
+import { APP_NAME } from "@constants/constants";
 
 export default function Navbar() {
   const { pathname } = useLocation();
