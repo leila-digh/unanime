@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-noto-sans: "Noto Sans", sans-serif;
+  --font-roboto-mono: "Roboto Mono", monospace;
+  --font-erica-one: "Erica One", sans-serif;
+
+  /* Base palette */
+  --color-ivory: #fbfbef;
+  --color-spicy-orange: #d74e09;
+  --color-yale-blue: #124e78;
+  --color-lime-moss: #88b449;
+  --color-dark-garnet: #6e0e0a;
+  --color-dark-wine: #7b2420;
+
+  --color-background: #FBFBEF;
+  --color-dark-green: #28681A;
+  --color-light-green: #88B449;
+  --color-dark-blue: #124E78;
+  --color-dark-orange: #D74E09;
+}
+/* =========================
+   DESIGN TOKENS (CSS VARIABLES)
+   ========================= */
+
+:root {
+  /* Fonts */
+  --font-noto-sans: "Noto Sans", sans-serif;
+  --font-roboto-mono: "Roboto Mono", monospace;
+  --font-erica-one: "Erica One", sans-serif;
+
+  /* Base palette */
+  --color-ivory: #fbfbef;
+  --color-spicy-orange: #d74e09;
+  --color-yale-blue: #124e78;
+  --color-lime-moss: #88b449;
+  --color-dark-garnet: #6e0e0a;
+  --color-dark-wine: #7b2420;
+
+  /* Semantic mapping */
+  --color-background: var(--color-ivory);
+  --color-primary: var(--color-yale-blue);
+  --color-accent: var(--color-spicy-orange);
+  --color-success: var(--color-lime-moss);
+  --color-danger: var(--color-dark-garnet);
+}
+
+/* =========================
+   BASE STYLES
+   ========================= */
+@layer base{
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-yale-blue transition-colors duration-300;
+    font-feature-settings: "rling" 1, "calt" 1;   
+    height: 100%;
+  
+  }
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  @apply border-b-2 border-yale-blue;
+  background-color: var(--ivory);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  @apply font-erica-one text-6xl text-dark-orange;
+  transition: color 0.2s;
+}
+
+.navbar__logo:hover {
+  @apply text-yale-blue
+}
+
+.navbar__quit {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6); /* replace with your token */
+  transition: color 0.2s;
+}
+
+.navbar__quit:hover {
+  color: var(--spicy-orange);
+}
+
+/* Utility helpers (optional but useful) */
+.font-display {
+  font-family: var(--font-erica-one);
+}
+
+.font-mono {
+  font-family: var(--font-roboto-mono);
+}
+
+.font-sans {
+  font-family: var(--font-noto-sans);
+}
+
+/* Slider */
+@layer components{
+  .slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      background: transparent;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+  }
+
+  .slider::-webkit-slider-runnable-track {
+    background: var(--color-primary);
+    height: 9px;
+    border-radius: 5px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-track {
+    background: var(--color-primary);
+    height: 9px;
+    border-radius: 5px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+    background: var(--color-accent);
+    cursor: pointer;
+    margin-top: -3px;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+    margin-top: -3px;
+  }
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+@layer components {
+  .footer {
+    @apply border-t-2 bg-[var(--color-background)] px-4 py-6;
+    border-color: var(--color-primary);
+  } 
+
+  .footer-inner {
+    @apply max-w-5xl mx-auto flex flex-col gap-6;
+  }
+
+  .footer-top {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 items-center;
+  }
+  .footer-card {
+    @apply rounded-lg p-4 border;
+    /* border-color: var(--color-primary); */
+  }
+
+  .footer-card--about {
+    /* @apply border-blue-500; */
+  }
+
+  .footer-card--instructions {
+    /* @apply border-emerald-500; */
+  }
+  .footer-bottom {
+    @apply flex flex-col items-center gap-2 text-center;
+  }
+
+  .footer-brand {
+    @apply text-xl tracking-wide text-yale-blue;
+    font-family: var(--font-erica-one);
+  }
+
+  .footer-meta {
+    @apply text-xs uppercase tracking-wider;
+    font-family: var(--font-roboto-mono);
+    color: rgba(18, 78, 120, 0.6);
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .footer-top {
+      @apply flex-col items-center text-center;
+    }
+  }
+}
