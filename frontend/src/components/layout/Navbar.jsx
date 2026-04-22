@@ -1,5 +1,8 @@
 import { Link, useLocation } from "react-router";
 import { APP_NAME } from "@constants/constants";
+import { RiDoorOpenFill } from "react-icons/ri";
+import { IoMdSettings } from "react-icons/io";
+import { IoIosBookmark } from "react-icons/io";
 
 export default function Navbar() {
   const { pathname } = useLocation();
@@ -7,15 +10,20 @@ export default function Navbar() {
 
   return (
     <header className="navbar">
-        <Link to="/" className="navbar__logo">
-            {APP_NAME}
-        </Link>
+  <div className="navbar__left" />
 
-        {inQuiz && (
-            <Link to="/" className="navbar__quit">
-            ← quitter
-            </Link>
-        )}
-    </header>
+  <Link to="/" className="navbar__logo">
+    {APP_NAME}
+  </Link>
+
+  <div className="navbar__right">
+    <IoMdSettings size={48} />
+<IoIosBookmark size={48} />
+
+    {inQuiz && (
+      <Link to="/" className="navbar__quit"><RiDoorOpenFill size={48} /></Link>
+    )}
+  </div>
+</header>
   );
 }

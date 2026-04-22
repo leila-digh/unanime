@@ -68,33 +68,43 @@
    NAVBAR
 ========================= */
 
-.navbar {
-  @apply border-b-2 border-yale-blue;
+/* .navbar {
+  @apply border-b-2 border-yale-blue items-center;
   background-color: var(--ivory);
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 .navbar__logo {
-  @apply font-erica-one text-6xl text-dark-orange;
+  @apply font-erica-one text-6xl text-dark-orange text-center;
   transition: color 0.2s;
+}
+
+.navbar {
+  @apply flex items-center justify-between border-b-2 border-yale-blue;
+  padding: 1rem 1.5rem;
+}
+
+.navbar__left,
+.navbar__right {
+  width: 120px;
+  @apply flex flex-row gap-6;
+  font-family: var(--font-mono);
+  color: var(--color-yale-blue);
 }
 
 .navbar__logo:hover {
   @apply text-yale-blue
 }
-
+/* 
 .navbar__quit {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.6); /* replace with your token */
   transition: color 0.2s;
-}
+} */
 
 .navbar__quit:hover {
-  color: var(--spicy-orange);
+  color: var(--color-spicy-orange);
 }
 
 /* Utility helpers (optional but useful) */
@@ -210,3 +220,4 @@
     }
   }
 }
+
