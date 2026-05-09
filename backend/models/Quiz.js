@@ -81,13 +81,33 @@ class Quiz {
     this.status                = STATUS.REVEALING;
   }
 
-  addObjection(socketId, answerIndex) {
-    // One objection per person, only during REVEALING
-    if (this.status !== STATUS.REVEALING) return false;
-    if (this.turn.objections[socketId] !== undefined) return false;
-    this.turn.objections[socketId] = answerIndex;
+  // addObjection(socketId, answerIndex) {
+  //   // One objection per person, only during REVEALING
+  //   if (this.status !== STATUS.REVEALING) return false;
+  //   if (this.turn.objections[socketId] !== undefined) return false;
+  //   this.turn.objections[socketId] = answerIndex;
+  //   return true;
+  // }
+  setObjection(socketId, answerIndex, action) {
+  if (this.status !== STATUS.REVEALING) return false;
+
+  const current = this.turn.objections[socketId];
+
+  if (action === "add") {
+    this.turn.objections[socketId] = answerIndex; // overrides previous
     return true;
   }
+
+  if (action === "remove") {
+    if (current === answerIndex) {
+      delete this.turn.objections[socketId];
+      return true;
+    }
+    return false;
+  }
+
+  return false;
+}
 
   // Returns points awarded
   finalizeObjections(activePlayerId) {

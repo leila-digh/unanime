@@ -26,12 +26,12 @@ module.exports = function answerHandler(io, socket, rooms) {
   // ── answers:object ───────────────────────────────────────────────────────────
   // Any non-active player can object to one answer.
 
-  socket.on("answers:object", ({ roomId, answerIndex } = {}) => {
+  socket.on("answers:objection:set", ({ roomId, answerIndex, action } = {}) => {
     const room = findRoom(roomId);
     if (!room) return;
     if (socket.id === room.getActivePlayerId()) return; // can't object to own answers
 
-    const ok = room.quiz.addObjection(socket.id, answerIndex);
+    const ok = room.quiz.setObjection(socket.id, answerIndex, action);
     if (ok) broadcast(room);
   });
 

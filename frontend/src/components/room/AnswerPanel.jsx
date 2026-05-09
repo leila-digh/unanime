@@ -92,10 +92,14 @@ export default function AnswerPanel({ roomId, amActiveTurn, quiz, players, mySoc
 
   if (quiz?.status === "revealing" && turn) {
     const myObjIndex  = turn.objections?.[mySocketId];
-    const hasObjected = myObjIndex !== undefined;
+    // const hasObjected = myObjIndex !== undefined;
 
-    const handleObject = (answerIndex) => {
-      socket.emit("answers:object", { roomId, answerIndex });
+    const handleObject = (answerIndex, isObjectingThis) => {
+      socket.emit("answers:objection:set", {
+        roomId,
+        answerIndex,
+        action: isObjectingThis ? "remove" : "add",
+      });
     };
 
     const handleFinalize = () => {
@@ -103,7 +107,8 @@ export default function AnswerPanel({ roomId, amActiveTurn, quiz, players, mySoc
     };
 
     const objCount = Object.keys(turn.objections ?? {}).length;
-    const points   = Math.max(0, 5 - objCount);
+    const points   = Math.max(0, turn.answers.length - objCount);
+    
 
     return (
       <div className="flex flex-col gap-4">
@@ -114,28 +119,34 @@ export default function AnswerPanel({ roomId, amActiveTurn, quiz, players, mySoc
         <ul className="flex flex-col gap-2">
           {turn.answers.map((ans, i) => {
             const objCountForThis = Object.values(turn.objections ?? {}).filter((v) => v === i).length;
-            const iObjThis        = myObjIndex === i;
+            const isObjectingThis = myObjIndex === i;
 
             return (
               <li
                 key={i}
                 className={`flex items-center gap-3 px-4 py-2 border rounded-lg
-                  ${iObjThis ? "border-spicy-orange bg-spicy-orange/5" : "border-yale-blue/15"}`}
+                  ${isObjectingThis ? "border-spicy-orange bg-spicy-orange/5" : "border-yale-blue/15"}`}
               >
                 <span className="flex-1 text-sm text-yale-blue">{ans}</span>
                 {objCountForThis > 0 && (
                   <span className="font-roboto-mono text-xs text-spicy-orange">✕{objCountForThis}</span>
                 )}
                 {/* Object button — only for non-active players who haven't objected yet */}
-                {!amActiveTurn && !hasObjected && (
+                {!amActiveTurn && (
+                  
                   <button
-                    onClick={() => handleObject(i)}
-                    className="font-roboto-mono text-xs border border-spicy-orange text-spicy-orange px-2 py-0.5 rounded hover:bg-spicy-orange hover:text-ivory transition-colors"
+                    onClick={() => handleObject(i, isObjectingThis)}
+                    className={`font-roboto-mono text-xs border px-2 py-0.5 rounded transition-colors
+    ${
+      isObjectingThis
+        ? "border-spicy-orange bg-spicy-orange text-ivory"
+        : "border-spicy-orange text-spicy-orange hover:bg-spicy-orange hover:text-ivory"
+    }`}
                   >
-                    Objecter
+                     {isObjectingThis ? "Annuler" : "Objecter"}
                   </button>
                 )}
-                {iObjThis && (
+                {isObjectingThis && (
                   <span className="font-roboto-mono text-xs text-spicy-orange/60 italic">objecté</span>
                 )}
               </li>
@@ -149,13 +160,13 @@ export default function AnswerPanel({ roomId, amActiveTurn, quiz, players, mySoc
         </p>
 
         {/* Active player closes the window */}
-        {amActiveTurn && !turn.answersSubmitted === false && (
+        {amActiveTurn && turn.answersSubmitted &&  (
           <Button onClick={handleFinalize} className="self-end">
             Valider & scorer →
           </Button>
         )}
 
-        {!amActiveTurn && hasObjected && (
+        {!amActiveTurn && (
           <p className="font-roboto-mono text-xs text-yale-blue/40 italic">
             ✓ Objection envoyée — en attente de la validation…
           </p>
