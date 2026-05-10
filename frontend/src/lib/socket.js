@@ -1,9 +1,7 @@
 import { io } from "socket.io-client";
 
-// The URL comes from your .env file:
-//   VITE_SOCKET_URL=http://localhost:3001   (development)
-//   VITE_SOCKET_URL=https://your-app.railway.app  (production)
-const URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:3001";
+// Use VITE_API_URL instead of VITE_SOCKET_URL
+const URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
 export const socket = io(URL, {
   transports: ["websocket"],
